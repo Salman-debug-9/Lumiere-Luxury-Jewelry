@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-luxury-black: #0B0B0C;
+  --color-luxury-gold: #D4AF37;
+  --color-luxury-rose: #B76E79;
+  --color-luxury-ivory: #F9F7F3;
+  --color-luxury-gray: #9A9A9A;
+
+  --font-heading: 'Bodoni Moda', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-cinzel: 'Bodoni Moda', serif;
+  /* Fallback alias to keep existing usage consistent */
+}
+
+@layer base {
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+
+  body {
+    background-color: var(--color-luxury-black);
+    color: var(--color-luxury-ivory);
+    font-family: var(--font-body);
+    font-weight: 300;
+    /* Lighter weight for elegance */
+    line-height: 1.8;
+    /* Relaxed reading */
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@utility text-gold-glow {
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+@utility border-gold-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility bg-radial-gradient {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
