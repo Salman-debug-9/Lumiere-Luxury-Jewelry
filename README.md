@@ -4,7 +4,6 @@
 [![Vite](https://img.shields.io/badge/Vite-7.2-646CFF?logo=vite&logoColor=white)](#)
 [![Express](https://img.shields.io/badge/Express-5.2-000000?logo=express&logoColor=white)](#)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)](#)
-[![License](https://img.shields.io/badge/License-MIT-gold)](#)
 
 **LUMIÈRE** is a premium, cinematic e-commerce destination designed for the world's most exquisite jewelry. This platform goes beyond simple shopping; it is a digital experience crafted with luxury aesthetics, smooth-as-silk animations, and a high-performance architecture.
 
