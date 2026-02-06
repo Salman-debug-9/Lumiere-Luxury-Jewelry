@@ -129,19 +129,20 @@ function App() {
   return (
     <div className="selection:bg-luxury-gold selection:text-black transition-colors duration-1000 bg-luxury-black text-white">
 
+    
       {/* Dynamic Nav */}
-      <nav className="fixed top-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center transition-all duration-700 bg-black/20 backdrop-blur-sm text-white">
+      <nav className="fixed top-0 w-full z-50 px-2 py-6 md:px-12 flex justify-between items-center transition-all duration-700 bg-black/20 backdrop-blur-sm text-white">
         <div
           onClick={() => setView('landing')}
-          className="text-xl md:text-2xl font-cinzel font-bold tracking-[0.3em] cursor-pointer hover:text-luxury-gold transition-colors"
+          className="text-lg md:text-2xl font-cinzel font-bold tracking-[0.1em] md:tracking-[0.3em] cursor-pointer hover:text-luxury-gold transition-colors"
         >
           LUMIÈRE
         </div>
 
-        <div className="flex items-center space-x-6 md:space-x-10 text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium">
+        <div className="flex items-center space-x-2 md:space-x-10 text-[9px] md:text-xs uppercase tracking-widest md:tracking-[0.3em] font-medium">
           <button
             onClick={() => setView('landing')}
-            className={`hover:text-luxury-gold transition-all duration-500 pb-2 relative hidden md:block ${view === 'landing' ? 'text-luxury-gold' : 'opacity-60'}`}
+            className={`hover:text-luxury-gold transition-all duration-500 pb-2 relative block ${view === 'landing' ? 'text-luxury-gold' : 'opacity-60'}`}
           >
             Home
             {view === 'landing' && (
@@ -169,7 +170,7 @@ function App() {
 
           <button
             onClick={() => setView('selection')}
-            className="group relative flex items-center space-x-3 pb-2"
+            className="group relative flex items-center space-x-1 md:space-x-3 pb-2"
           >
             <span className={`transition-all duration-500 group-hover:text-luxury-gold ${view === 'selection' ? 'text-luxury-gold' : 'opacity-60'}`}>Selection</span>
             {view === 'selection' && (
@@ -193,7 +194,7 @@ function App() {
               onClick={() => setView('orders')}
               className={`hover:text-luxury-gold transition-all duration-500 pb-2 relative ${view === 'orders' ? 'text-luxury-gold' : 'opacity-60'}`}
             >
-              My Orders
+              Orders
               {view === 'orders' && (
                 <motion.div
                   layoutId="navUnderline"
@@ -206,7 +207,7 @@ function App() {
 
           {user ? (
             <div className="relative group">
-              <div className="w-10 h-10 rounded-full border border-luxury-gold/30 flex items-center justify-center text-luxury-gold text-sm font-heading cursor-pointer group-hover:border-luxury-gold transition-all duration-700 bg-white/5 backdrop-blur-sm overflow-hidden">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-luxury-gold/30 flex items-center justify-center text-luxury-gold text-xs md:text-sm font-heading cursor-pointer group-hover:border-luxury-gold transition-all duration-700 bg-white/5 backdrop-blur-sm overflow-hidden">
                 <span className="opacity-80 group-hover:opacity-100 transition-opacity">
                   {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
                 </span>
@@ -234,7 +235,7 @@ function App() {
           ) : (
             <button
               onClick={() => setShowAuth(true)}
-              className="px-4 py-2 border border-white/10 hover:border-luxury-gold/50 hover:text-luxury-gold transition-all duration-500"
+              className="px-2 py-1 md:px-4 md:py-2 border border-white/10 hover:border-luxury-gold/50 hover:text-luxury-gold transition-all duration-500"
             >
               Login
             </button>
