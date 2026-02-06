@@ -19,7 +19,9 @@ const ProductDetailPage = ({ onConsultation }) => {
         setTimeout(() => setIsAdded(false), 3000);
     };
 
-    const images = selectedProduct.images || [selectedProduct.img, selectedProduct.img, selectedProduct.img];
+    const images = (selectedProduct.images && selectedProduct.images.length > 0)
+    ? selectedProduct.images
+    : [selectedProduct.img, selectedProduct.img, selectedProduct.img];
 
     return (
         <section className="bg-black min-h-screen text-white selection:bg-luxury-gold selection:text-black overflow-x-hidden relative">
@@ -198,3 +200,4 @@ const DetailItem = ({ label, value }) => (
 );
 
 export default ProductDetailPage;
+
